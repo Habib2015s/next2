@@ -50,7 +50,7 @@ export default function Header() {
       </div>
 
       {/* محتوا وسط صفحه (لوگو + متن) */}
-      <div className="flex flex-col justify-center items-start ml-96 h-full gap-8 animate-fadeDown  px-4">
+      <div className="flex flex-col justify-center items-start ml-96 h-full gap-8  px-4">
         {/* لوگو */}
         <img
           src="https://d10j3mvrs1suex.cloudfront.net/s:bzglfiles/u/623852/5a306c1a3a97ec60574529e55ae12e655bc872e0/original/bs-logo-2022-flat-72.png/!!/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.png"
