@@ -1,12 +1,13 @@
+
 import React from 'react'
 import Header from './Header'
 import About from './About'
 
-export default function page  ()  {
+export default function Page() {
   return (
     <div>
-        <Header/>
-        <About/>
+      <Header />
+      <About />
     </div>
   )
 }
