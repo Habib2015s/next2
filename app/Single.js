@@ -11,7 +11,6 @@ export default function Single({ tracks = [] }) {
 
         <p className="text-4xl text-[#EB2188] text-center m-10 font-bold"> Best Tracks</p>
     <div className="w-full max-w-4xl mt-6 mx-auto text-white flex gap-6">
-      {/* لیست کاورها - سمت چپ */}
       <div className="grid grid-cols-2 gap-4 flex-shrink-0 w-1/2">
         {topTracks.map((track) => (
             <div
@@ -30,7 +29,6 @@ export default function Single({ tracks = [] }) {
         ))}
       </div>
 
-      {/* باکس جزئیات ترک انتخاب‌شده - سمت راست */}
       <div className="flex-1 bg-white/10 p-6 rounded-lg backdrop-blur-md flex flex-col items-center min-h-[350px]">
         {selectedTrack ? (
             <>
