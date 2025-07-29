@@ -14,7 +14,7 @@ export default function Footer() {
         {/* بخش متن */}
         <div className="text-center md:text-left flex-1">
           <h3 className="text-3xl font-bold mb-2 tracking-wide">CONNECT WITH US</h3>
-          <p className="text-gray-300">We'd love to stay in touch</p>
+          <p className="text-gray-300">We&apos;d love to stay in touch</p>
         </div>
 
         {/* فرم ایمیل */}
