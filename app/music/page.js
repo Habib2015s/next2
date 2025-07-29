@@ -34,7 +34,6 @@ export default function Page() {
     }
     setLoading(false)
   }
-console.log(tracks);
 
   return (
    <div

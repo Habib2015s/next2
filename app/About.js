@@ -4,6 +4,7 @@ import React from 'react'
 export default function About() {
   return (
     <div id="about" className="bg-pink-700 px-10 py-20 text-white">
+      <p className='font-bold text-5xl text-[#0b1f2e] m-7'>ABOUT</p>
       <div className="flex flex-col md:flex-row items-center gap-8">
         <img
           src="https://d10j3mvrs1suex.cloudfront.net/s:bzglfiles/u/623852/4259bfa634e4085f719314f7e9dfae64fcc08505/original/mailing-list-back.jpg/!!/b%3AW1sicmVzaXplIiwyMDAwXSxbIm1heCJdLFsid2UiXV0%3D/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.jpg"
