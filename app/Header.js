@@ -1,4 +1,3 @@
-// components/Header.jsx
 'use client'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,7 +8,7 @@ import React from 'react'
 export default function Header() {
   const menuItems = [
     { label: "HOME", href: "#home" },
-    { label: "MUSIC", href: "#music" },
+    { label: "MUSIC", href: "/music" }, // مسیر جدید
     { label: "TOUR", href: "#tour" },
     { label: "ABOUT", href: "#about" },
   ]
@@ -32,18 +31,29 @@ export default function Header() {
         <h3 className="text-2xl mr-32 font-bold">T KAHN</h3>
 
         <div className="flex items-center gap-10 text-lg">
-          {menuItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="relative group cursor-pointer transition-all duration-200 hover:scale-110"
-            >
-              <p className="transition-colors duration-200 group-hover:text-pink-400">
-                {item.label}
-              </p>
-              <span className="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-pink-500 transition-all duration-300 group-hover:w-full" />
-            </a>
-          ))}
+          {menuItems.map((item) =>
+            item.label === "MUSIC" ? (
+              <Link key={item.label} href={item.href}>
+                <div className="relative group cursor-pointer transition-all duration-200 hover:scale-110">
+                  <p className="transition-colors duration-200 group-hover:text-pink-400">
+                    {item.label}
+                  </p>
+                  <span className="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-pink-500 transition-all duration-300 group-hover:w-full" />
+                </div>
+              </Link>
+            ) : (
+              <a
+                key={item.label}
+                href={item.href}
+                className="relative group cursor-pointer transition-all duration-200 hover:scale-110"
+              >
+                <p className="transition-colors duration-200 group-hover:text-pink-400">
+                  {item.label}
+                </p>
+                <span className="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-pink-500 transition-all duration-300 group-hover:w-full" />
+              </a>
+            )
+          )}
 
           <Link href="/login">
             <button className="relative group flex items-center gap-2 cursor-pointer transition-all duration-200 hover:scale-110 hover:text-pink-400">
@@ -55,7 +65,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* محتوا وسط صفحه */}
+      {/* محتوای وسط */}
       <div className="flex flex-col justify-center items-start ml-96 h-full gap-8 px-4">
         <img
           src="https://d10j3mvrs1suex.cloudfront.net/s:bzglfiles/u/623852/5a306c1a3a97ec60574529e55ae12e655bc872e0/original/bs-logo-2022-flat-72.png/!!/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.png"
