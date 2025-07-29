@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Header from './Header'
 import About from './About'
 import Single from './Single'
+import Footer from './Footer'
 
 export default function Page() {
   const [tracks, setTracks] = useState([])
@@ -21,6 +22,7 @@ export default function Page() {
       <Header />
       <About />
       <Single tracks={tracks} />
+      <Footer/>
     </div>
   )
 }
