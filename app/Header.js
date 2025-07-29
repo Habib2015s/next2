@@ -24,7 +24,7 @@ export default function Header() {
   }, [menuOpen])
 
   return (
-    <div className="relative min-h-screen w-full overflow-visible text-white font-sans">
+    <div className="relative h-screen w-full overflow-visible text-white font-sans">
       <video
         autoPlay
         muted
@@ -36,8 +36,8 @@ export default function Header() {
         Your browser does not support the video tag.
       </video>
 
-      {/* دسکتاپ منو */}
-      <div className="hidden sm:flex justify-center animate-fadeDown items-center px-6 pt-6 relative z-20">
+      {/* دسکتاپ */}
+      <div className="hidden sm:flex justify-center animate-fadeDown items-center px-10 pt-8 relative z-20">
         <h3 className="text-2xl mr-32 font-bold">T KAHN</h3>
 
         <div className="flex items-center gap-10 text-lg">
@@ -75,7 +75,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* موبایل منو */}
+      {/* موبایل */}
       <div className="sm:hidden flex justify-between items-center px-6 pt-6 relative z-20">
         <h3 className="text-2xl font-bold">T KAHN</h3>
         <button
@@ -87,34 +87,24 @@ export default function Header() {
         </button>
       </div>
 
+      {/* منوی همبرگر */}
       <div
         ref={menuRef}
-        className={`sm:hidden bg-black/80 backdrop-blur-md w-full px-6 overflow-hidden transition-[max-height] duration-300 ease-in-out absolute top-[60px] z-40`}
+        className="sm:hidden bg-black/80 backdrop-blur-md w-full px-6 overflow-hidden transition-[max-height] duration-300 ease-in-out z-30 absolute top-[72px]"
         style={{ maxHeight: menuOpen ? menuHeight : 0 }}
         aria-hidden={!menuOpen}
       >
         <nav className="flex flex-col gap-6 py-4">
-          {menuItems.map((item) =>
-            item.label === "MUSIC" ? (
-              <Link
-                key={item.label}
-                href={item.href}
-                onClick={() => setMenuOpen(false)}
-                className="text-pink-400 font-semibold text-xl"
-              >
-                {item.label}
-              </Link>
-            ) : (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={() => setMenuOpen(false)}
-                className="text-white text-xl"
-              >
-                {item.label}
-              </a>
-            )
-          )}
+          {menuItems.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              onClick={() => setMenuOpen(false)}
+              className="text-pink-400 font-semibold text-xl"
+            >
+              {item.label}
+            </Link>
+          ))}
 
           <Link href="/login" onClick={() => setMenuOpen(false)}>
             <button className="mt-2 px-4 py-2 bg-pink-500 rounded text-white font-semibold w-full">
@@ -124,8 +114,8 @@ export default function Header() {
         </nav>
       </div>
 
-      {/* لوگو و متن اصلی */}
-      <div className="flex flex-col justify-center items-center sm:items-start sm:ml-96 h-full gap-6 px-4 text-center sm:text-left relative z-20">
+      {/* محتوای وسط صفحه */}
+      <div className="flex flex-col justify-center items-start px-4 sm:ml-96 h-full gap-8 relative z-20">
         <img
           src="https://d10j3mvrs1suex.cloudfront.net/s:bzglfiles/u/623852/5a306c1a3a97ec60574529e55ae12e655bc872e0/original/bs-logo-2022-flat-72.png/!!/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.png"
           alt="Logo"
